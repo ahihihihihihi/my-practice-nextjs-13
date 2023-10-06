@@ -1,94 +1,47 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Hello world with Nextjs 13
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className="home">
+      <p>Y&ecirc;u cầu:</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <p>Sử dụng API từ trang web https://reqres.in/ để tạo website.</p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <p>Sử dụng thư viện React để tạo một m&agrave;n h&igrave;nh website cơ bản bao gồm c&aacute;c chức năng:</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <p>&bull; 1. Đăng nhập</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+      <p>&bull; 2. Th&ecirc;m User</p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <p>&bull; 3. Sửa User</p>
+
+      <p>&bull; 4. Xo&aacute; User</p>
+
+      <p>&bull; 5. Hiển thị tất cả c&aacute;c User</p>
+
+      <p>&bull; 6. T&igrave;m kiếm User theo Id</p>
+
+      <p>
+        &bull; 7. Sắp xếp theo FirstName</p>
+
+      <p>&bull; 8. Import User từ file .csv</p>
+
+      <p>&bull; 9. Export User ra file .csv</p>
+
+      <p>Tự do t&ugrave;y chỉnh html, css, để c&oacute; một website nhẹ nh&agrave;ng, khoa học v&agrave; đẹp. Commit v&agrave; đẩy source code l&ecirc;n github public.</p>
+
+      <p>Triển khai website l&ecirc;n Heroku để demo.</p>
+
+      <p>Result: Thời gian ho&agrave;n th&agrave;nh: 1-3 ng&agrave;y</p>
+
+      <p>Gửi link Heroku v&agrave; Github link lại email n&agrave;y</p>
+
+      <p>Thời gian phản hồi 2 ng&agrave;y l&agrave;m việc kể từ ng&agrave;y nhận được b&agrave;i thi.</p>
+
+      <p>Y&ecirc;u cầu backend (optional - kh&ocirc;ng bắt buộc):</p>
+
+      <p>Sử dụng python django rest framework, tạo c&aacute;c api như tr&ecirc;n trang web: https://reqres.in/</p>
+    </div>
   )
 }
