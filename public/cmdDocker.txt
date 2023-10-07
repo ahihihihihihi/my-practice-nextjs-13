@@ -1,0 +1,7 @@
+docker build -t next6:latest .
+
+docker run -p 3000:3000 next6
+
+docker build --tag node-docker .
+
+docker run -p 8080:8080 -d node-docker
