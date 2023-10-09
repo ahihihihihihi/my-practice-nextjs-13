@@ -9,6 +9,7 @@ import 'nprogress/nprogress.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import ReduxProvider from '@/redux/provider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,13 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <AppHeader />
-        <Container>
-          <div className='app-container'>
-            {children}
-          </div>
-        </Container>
-        <AppFooter />
+        <ReduxProvider>
+          <AppHeader />
+          <Container>
+            <div className='app-container'>
+              {children}
+            </div>
+          </Container>
+          <AppFooter />
+        </ReduxProvider>
         <ToastContainer
           position="bottom-right"
           autoClose={5000}

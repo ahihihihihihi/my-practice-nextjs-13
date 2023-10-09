@@ -38,6 +38,7 @@ instance.interceptors.response.use(function (response: any) {
 }, function (error) {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
+    NProgress.done();
     let res: any = {}
     if (error.response) {
         // The request was made and the server responded with a status code
