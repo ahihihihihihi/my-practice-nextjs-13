@@ -12,6 +12,8 @@ import _, { debounce } from 'lodash';
 import { CSVLink } from "react-csv";
 import { toast } from 'react-toastify';
 import Papa from 'papaparse'
+import { useSelector } from "react-redux";
+import { Alert } from 'react-bootstrap';
 
 
 export default function Users() {
@@ -30,6 +32,8 @@ export default function Users() {
 
   const [sortBy, setSortBy] = useState('id')
   const [sortField, setSortField] = useState('asc')
+
+  const account = useSelector((state: any) => state.login.account)
 
   const handleClose = () => {
     setIsShowModalAddNew(false)
@@ -190,6 +194,19 @@ export default function Users() {
   ]
 
   // console.log(">>>check sort: ", sortBy, sortField)
+
+  if (account && !account.auth) {
+    return (
+      <>
+        <Alert variant="danger" className='my-3'>
+          <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+          <p>
+            Access is denied!
+          </p>
+        </Alert>
+      </>
+    )
+  }
 
   return (
     <div className='users'>

@@ -21,10 +21,6 @@ const AppHeader = () => {
 
     const dispatch = useAppDispatch()
 
-    const handleLogout = () => {
-        dispatch(handleLogoutRedux({}))
-    }
-
     useEffect(() => {
         if (user && user.auth === false) {
             dispatch(handleSetAuthNull({}))
@@ -32,6 +28,12 @@ const AppHeader = () => {
             router.push("/")
         }
     }, [user])
+
+    const handleLogout = () => {
+        dispatch(handleLogoutRedux({}))
+    }
+
+
 
     return (
         <>
