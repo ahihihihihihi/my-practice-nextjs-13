@@ -32,6 +32,9 @@ export const loginSlide = createSlice({
             state.account.auth = false
             state.account.token = ''
         },
+        handleSetAuthNull: (state: any, action) => {
+            state.account.auth = null
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -65,5 +68,5 @@ export const loginSlide = createSlice({
     },
 });
 
-export const { handleLogoutRedux } = loginSlide.actions;
+export const { handleLogoutRedux, handleSetAuthNull } = loginSlide.actions;
 export default loginSlide.reducer;

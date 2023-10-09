@@ -8,7 +8,7 @@ import logo from '@/assets/images/logo192.png'
 import Link from 'next/link'
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "@/redux/store";
-import { handleLogoutRedux } from '@/redux/slice/loginSlice';
+import { handleLogoutRedux, handleSetAuthNull } from '@/redux/slice/loginSlice';
 import { useEffect } from 'react'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation'
@@ -27,6 +27,7 @@ const AppHeader = () => {
 
     useEffect(() => {
         if (user && user.auth === false) {
+            dispatch(handleSetAuthNull({}))
             toast.success("Logout succesfully!")
             router.push("/")
         }
